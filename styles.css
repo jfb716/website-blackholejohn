@@ -1,5 +1,4 @@
 
-
 header {
     color: #434343;
     background-color: #cecece;
@@ -31,21 +30,7 @@ section  {
     padding: 10px;
 }
 
-.table{
-    margin: 20px;
-    background-color: #cecece;
-    border-style: outset;
-    border-width: 15px;
-    color: #434343;
-}
 
-table {
-    width: 100%;
-}
-
-caption {
-    border: 4px double black;
-}
 
 #unordered-list, #ordered-list, #description-list {
     color: #434343;
@@ -111,6 +96,41 @@ p, th, td {
 h3 {
     font-variant: small-caps;
 }
+
+ul, ol, dl {
+    list-style-position: inside;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
