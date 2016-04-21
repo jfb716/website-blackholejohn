@@ -1,24 +1,45 @@
 
-header {
-    color: #434343;
-    background-color: #cecece;
-    border-style: outset;
-    border-width: 15px;
-    margin: 20px;
-    padding: 10px;
+nav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
     text-align: center;
 }
 
+nav a {
+    float: left;
+    padding: 14px 16px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #6d6d6d;
+}
 
 aside {
-    color: #434343;
-    background-color: #cecece;
-    border-style: outset;
-    border-width: 15px;
-    margin: 20px;
-    padding: 10px;
-    width: 200px;
-    text-align: justify;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    background-color: #f1f1f1;
+}
+
+aside a {
+    display: block;
+    color: #000;
+    padding: 8px 0px 8px 16px;
+    text-decoration: none;
+}
+
+aside a:hover {
+    background-color: #555;
+    color: white;
 }
 
 section  {
@@ -28,6 +49,10 @@ section  {
     border-width: 15px;
     margin: 20px;
     padding: 10px;
+    width: 60%;
+    display: block;
+    float: center; 
+    position: relative; 
 }
 
 
@@ -40,6 +65,8 @@ section  {
     margin: 20px;
     padding: 10px;
     width: 200px;
+    clear: both;
+    float: right;
 }
 
 .video {
@@ -50,6 +77,7 @@ section  {
     margin: 20px;
     padding: 10px;
     max-width: 530px;
+    max-height: 500px;
 }
 
 video {
