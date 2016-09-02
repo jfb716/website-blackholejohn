@@ -1,0 +1,55 @@
+main {
+    height: 800px;
+}
+
+.col_1 {
+    float: left;
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
+    
+}
+
+.col_2 {
+    float: left;
+    width: 40%;
+    height: 100%;
+    
+    box-sizing: border-box;
+    background-color: lightgray;
+    text-align: center;
+}
+
+
+label {
+    display: inline-block;
+}
+
+select {
+    display: inline-block;
+}
+
+.blue_top {
+    background-color: #416BC4;
+    height: 50px;
+}
+
+.blue_bot {
+    background-color: #416BC4;
+    height: 50px;
+    clear: both;
+}
+
+.title_result, .subtitle_result, .full_result, .main_result {
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    color: rgb(150, 1, 1);
+    box-sizing: border-box;
+}
+
+.ad_tag {
+    display: inline-block;
+    margin-top: 100px;
+}

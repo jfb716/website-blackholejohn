@@ -4,26 +4,326 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>BlackHoleJohn</title> 
         <meta name="author" content="John F. Black">
-        <meta name="description" content="John F. Black - Test Site - BlackHoleJohn">
+        <meta name="description" content="Test site for John F. Black">
+        <meta name="keywords" content="John, John Black, John F Black, John F. Black, John Francis Black, Test Site, Test, Synacor, Facebook, NBC, NBCUniversal, LocalEdge, Buffalo, New York, New York City, NYC, Grand Island, University at Buffalo, UB, Technical Support, Ad Operations, AdOps, AdTech">
+        <title>BlackHoleJohn</title>
         <link rel="stylesheet" href="styles.css">
-        <meta name="keywords" content=John, John Black, John F Black, John F. Black, John Francis Black, Test Site, Test, Synacor, Facebook, NBC, NBCUniversal, LocalEdge, Buffalo, New York, New York City, NYC, Grand Island, University at Buffalo, UB, Technical Support, Ad Operations, AdOps, AdTech>
-        <meta property="fb:pages" content="990010987748138" />
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" media="(max-width:499px)" href="css/small.css">
         <link rel="stylesheet" media="(min-width:500px) and (max-width:732px)" href="css/med.css">
         <link rel="stylesheet" media="(min-width:732px) and (max-width:1050px)" href="css/large.css">
         <link rel="stylesheet" media="(min-width:1051px)" href="css/xlarge.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
-    
     <body>
-       
-        
+       <section>
+           <div class="blue_top">
+               
+           </div>
+       </section>
+       <section>
+           <main>
+               <div class="col_1" id="tabs">
+                  <ul>
+                    <li><a href="#tabs-1">Main Class</a></li>
+                    <li><a href="#tabs-2">Media Class</a></li>
+                    <li><a href="#tabs-3">Title Class</a></li>
+                    <li><a href="#tabs-4">Subtitle Class</a></li>
+                    <li><a href="#tabs-5">CTA Class</a></li>
+                    <li><a href="#tabs-6">Icon Class</a></li>
+                    <li><a href="#tabs-7">Full CSS</a></li>
+                  </ul>
+                <div class="main" id="tabs-1">
+                    <div class="cat_box">
+                    <label for="background_color_main">Background Color: </label>
+                     <select class="background_color_main" name="background_color_main" >
+                      <option selected="selected" value="white">white</option>
+                      <option value="black">black</option>
+                    </select>
+                    </div>
+                    <div class="cat_box">
+                    <label for="color_main">Font Color: </label>
+                     <select class="color_main" name="color_main" >
+                      <option selected="selected" value="#444">#444</option>
+                      <option value="#333">#333</option>
+                    </select>
+                    </div>
+                    <div class="cat_box">
+                    <label for="width_main">Ad Width: </label>
+                     <select class="width_main" name="width_main" >
+                      <option selected="selected" value="280px">280px</option>
+                      <option selected="selected" value="300px">300px</option>
+                      <option selected="selected" value="320px">320px</option>
+                    </select>
+                    </div>
+                    <div class="cat_box">
+                    <label for="height_main">Ad Height: </label>
+                     <select class="height_main" name="height_main" >
+                      <option value="230px">230px</option>
+                      <option selected="selected" value="250px">250px</option>
+                      <option value="270px">270px</option>
+                    </select>
+                    </div>
+                        <div>
+                            <button class="main_button">Get CSS</button>
+                            <div class="main_result">&nbsp;</div>
+                        </div>
+                </div>
+                <div class="media" id="tabs-2">
+                    john
+                </div>
+                  <div class="title" id="tabs-3">
+                   <div class="cat_box">
+                    <label for="font_size_title">Font Size: </label>
+                     <select class="font_size_title" name="font_size_title" >
+                      <option value="10px">10px</option>
+                      <option value="11px">11px</option>
+                      <option selected="selected" value="12px">12px</option>
+                      <option value="13px">13px</option>
+                      <option value="14px">14px</option>
+                      <option value="15px">15px</option>
+                      <option value="16px">16px</option>
+                      <option value="17px">17px</option>
+                      <option value="18px">18px</option>
+                    </select>
+                    </div>
+                    <div class="cat_box">
+                    <label for="font_weight_title">Font Weight: </label>
+                     <select class="font_weight_title" name="font_weight_title" >
+                      <option value="100">100</option>
+                      <option value="200">200</option>
+                      <option value="300">300</option>
+                      <option selected="selected" value="400">400</option>
+                      <option value="500">500</option>
+                      <option value="600">600</option>
+                      <option value="700">700</option>
+                      <option value="800">800</option>
+                      <option value="900">900</option>
+                    </select>
+                    </div>
+                    <div class="cat_box">
+                    <label for="font_family_title">Font Family: </label>
+                     <select class="font_family_title" name="font_family_title" >
+                      <option value="one">"Palatino Linotype", "Book Antiqua", Palatino, serif</option>
+                      <option value="two">"Times New Roman", Times, serif</option>
+                      <option selected="selected" value="three">Arial, Helvetica, sans-serif</option>
+                      <option value="four">"Arial Black", Gadget, sans-serif</option>
+                      <option value="five">"Comic Sans MS", cursive, sans-serif</option>
+                      <option value="six">Impact, Charcoal, sans-serif</option>
+                      <option value="seven">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                      <option value="eight">Tahoma, Geneva, sans-serif</option>
+                      <option value="nine">"Trebuchet MS", Helvetica, sans-serif</option>
+                      <option value="ten">Verdana, Geneva, sans-serif</option>
+                      <option value="eleven">"Courier New", Courier, monospace"</option>
+                      <option value="twelve">"Lucida Console", Monaco, monospace</option>
+                    </select>
+                    </div>
+                    <div class="cat_box">
+                    <label for="margin_left_title">Margin Left: </label>
+                     <select class="margin_left_title" name="margin_left_title" >
+                     <option selected="selected" value="0">0px</option>
+                      <option value="1">2px</option>
+                      <option value="2">4px</option>
+                      <option value="3">6px</option>
+                      <option value="4">8px</option>
+                      <option value="5">10px</option>
+                      <option value="6">12px</option>
+                      <option value="7">14px</option>
+                      <option value="8">16px</option>
+                      <option value="9">18px</option>
+                      <option value="10">20px</option>
+                    </select>
+                    </div>
+                        <div>
+                            <button class="title_button">Get CSS</button>
+                            <div class="title_result">&nbsp;</div>
+                        </div>
+                      
+                    </div>
+
+                    <div class="subtitle" id="tabs-4">
+                    <div class="cat_box">
+                        <label for="font_size_subtitle">Font Size: </label>
+                         <select class="font_size_subtitle" name="font_size_subtitle" >
+                          <option value="10px">10px</option>
+                          <option value="11px">11px</option>
+                          <option value="12px">12px</option>
+                          <option value="13px">13px</option>
+                          <option value="14px">14px</option>
+                          <option value="15px">15px</option>
+                          <option value="16px">16px</option>
+                          <option value="17px">17px</option>
+                          <option selected="selected" value="18px">18px</option>
+                        </select>
+                    </div>
+                    <div class="cat_box">
+                        <label for="font_weight_subtitle">Font Weight: </label>
+                         <select class="font_weight_subtitle" name="font_weight_subtitle" >
+                          <option value="100">100</option>
+                          <option value="200">200</option>
+                          <option value="300">300</option>
+                          <option selected="selected" value="400">400</option>
+                          <option value="500">500</option>
+                          <option value="600">600</option>
+                          <option value="700">700</option>
+                          <option value="800">800</option>
+                          <option value="900">900</option>
+                        </select>
+                    </div>
+                    <div class="cat_box">
+                        <label for="font_family_subtitle">Font Family: </label>
+                         <select class="font_family_subtitle" name="font_family_subtitle" >
+                          <option value="one">"Palatino Linotype", "Book Antiqua", Palatino, serif</option>
+                          <option value="two">"Times New Roman", Times, serif</option>
+                          <option selected="selected" value="three">Arial, Helvetica, sans-serif</option>
+                          <option value="four">"Arial Black", Gadget, sans-serif</option>
+                          <option value="five">"Comic Sans MS", cursive, sans-serif</option>
+                          <option value="six">Impact, Charcoal, sans-serif</option>
+                          <option value="seven">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                          <option value="eight">Tahoma, Geneva, sans-serif</option>
+                          <option value="nine">"Trebuchet MS", Helvetica, sans-serif</option>
+                          <option value="ten">Verdana, Geneva, sans-serif</option>
+                          <option value="eleven">"Courier New", Courier, monospace"</option>
+                          <option value="twelve">"Lucida Console", Monaco, monospace</option>
+                        </select>
+                    </div>
+                    <div class="cat_box">
+                        <label for="margin_left_subtitle">Margin Left: </label>
+                         <select class="margin_left_subtitle" name="margin_left_subtitle">
+                         <option selected="selected" value="0">0px</option>
+                          <option value="1">2px</option>
+                          <option value="2">4px</option>
+                          <option value="3">6px</option>
+                          <option value="4">8px</option>
+                          <option value="5">10px</option>
+                          <option value="6">12px</option>
+                          <option value="7">14px</option>
+                          <option value="8">16px</option>
+                          <option value="9">18px</option>
+                          <option value="10">20px</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="subtitle_button">Get CSS</button>
+                        <div class="subtitle_result">&nbsp;</div>
+                    </div>
+                      
+                    </div>
+                    
+                    <div class="cta" id="tabs-5">
+                        john
+                    </div>
+                    
+                    <div class="icon" id="tabs-6">
+                        john
+                    </div>
+                    
+                    <div class="full_css" id="tabs-7">
+                        <div>
+                            <button class="full_button">Get CSS</button>
+                            <div class="full_result">&nbsp;</div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            <div class="col_2">
+               <div class="ad_tag">
+                <div style="display:none; position: relative;">
+                  <iframe style="display:none;"></iframe>
+                  <script type="text/javascript">
+                    var data = {
+                      placementid: '118220978561571_223415828042085',
+                      format: 'native',
+                      testmode: true,
+                      onAdLoaded: function(element) {
+                        console.log('Audience Network ad loaded');
+                        element.style.display = 'block';
+                      },
+                      onAdError: function(errorCode, errorMessage) {
+                        console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
+                      }
+                    };
+                    (function(w,l,d,t){var a=t();var b=d.currentScript||(function(){var c=d.getElementsByTagName('script');return c[c.length-1];})();var e=b.parentElement;e.dataset.placementid=data.placementid;var f=function(v){try{return v.document.referrer;}catch(e){}return'';};var g=function(h){var i=h.indexOf('/',h.indexOf('://')+3);if(i===-1){return h;}return h.substring(0,i);};var j=[l.href];var k=false;var m=false;if(w!==w.parent){var n;var o=w;while(o!==n){var h;try{m=m||(o.$sf&&o.$sf.ext);h=o.location.href;}catch(e){k=true;}j.push(h||f(n));n=o;o=o.parent;}}var p=l.ancestorOrigins;if(p){if(p.length>0){data.domain=p[p.length-1];}else{data.domain=g(j[j.length-1]);}}data.url=j[j.length-1];data.channel=g(j[0]);data.width=screen.width;data.height=screen.height;data.pixelratio=w.devicePixelRatio;data.placementindex=w.ADNW&&w.ADNW.Ads?w.ADNW.Ads.length:0;data.crossdomain=k;data.safeframe=!!m;var q={};q.iframe=e.firstElementChild;var r='https://www.facebook.com/audiencenetwork/web/?sdk=5.3';for(var s in data){q[s]=data[s];if(typeof(data[s])!=='function'){r+='&'+s+'='+encodeURIComponent(data[s]);}}q.iframe.src=r;q.tagJsInitTime=a;q.rootElement=e;q.events=[];w.addEventListener('message',function(u){if(u.source!==q.iframe.contentWindow){return;}u.data.receivedTimestamp=t();if(this.sdkEventHandler){this.sdkEventHandler(u.data);}else{this.events.push(u.data);}}.bind(q),false);q.tagJsIframeAppendedTime=t();w.ADNW=w.ADNW||{};w.ADNW.Ads=w.ADNW.Ads||[];w.ADNW.Ads.push(q);w.ADNW.init&&w.ADNW.init(q);})(window,location,document,Date.now||function(){return+new Date;});
+                  </script>
+                  <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw.js" async></script>
+                  <style>
+                   .thirdPartyRoot {
+                        background-color: white;
+                        color: #444;
+                        border: 1px solid #ccc;
+                        border-left: 0;
+                        border-right: 0;
+                        font-family: sans-serif;
+                        font-size: 14px;
+                        line-height: 16px;
+                        width: 320px;
+                        text-align: left;
+                        position: relative;
+                      }
+                      .thirdPartyMediaClass {
+                        width: 320px;
+                        height: 168px;
+                        margin: 12px 0;
+                      }
+                      .thirdPartySubtitleClass {
+                        font-size: 18px;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        height: 16px;
+                        -webkit-box-orient: vertical;
+                      }
+                      .thirdPartyTitleClass {
+                        padding-right: 12px;
+                        line-height: 18px;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        height: 36px;
+                        -webkit-box-orient: vertical;
+                      }
+                      .thirdPartyCallToActionClass {
+                        background-color: #416BC4;
+                        color: white;
+                        border-radius: 4px;
+                        padding: 6px 20px;
+                        float: right;
+                        text-align: center;
+                        text-transform: uppercase;
+                        font-size: 11px;
+                      }
+                      .fbDefaultNativeAdWrapper {
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin: 12px 0;
+                        height: 36px;
+                        vertical-align: top;
+                      }
+                  </style>
+                  <div class="thirdPartyRoot">
+                  <a class="fbAdLink">
+                    <div class="fbAdMedia thirdPartyMediaClass"></div>
+                    <div class="fbAdSubtitle thirdPartySubtitleClass"></div>
+                    <div class="fbDefaultNativeAdWrapper">
+                      <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
+                      <div class="fbAdTitle thirdPartyTitleClass"></div>
+                    </div>
+                  </a>
+                </div>
+                </div>
+                </div>
+            </div>
+        </main>
+        </section>
         <footer>
-            <p>&copy; John F. Black</p>
-        </footer>
-        
+           <div class="blue_bot">
+               
+           </div>
+       </footer>
     </body>
-    
 </html>
