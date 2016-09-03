@@ -14,10 +14,9 @@ main {
     float: left;
     width: 40%;
     height: 100%;
-    
     box-sizing: border-box;
     background-color: lightgray;
-    text-align: center;
+
 }
 
 
@@ -51,6 +50,31 @@ select {
 }
 
 .ad_tag {
-    display: inline-block;
-    margin-top: 100px;
+    position: fixed;
+    display: block;
+    margin-left: 25px;
+
+}
+
+.phone {
+    border: 5px solid #b9b9b9;
+    height: 667px;
+    width: 375px;
+    position: fixed;
+    margin-left: 5%;
+    margin-top: 10%;
+    display: block;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.p_text {
+    position: absolute;
+    bottom: 0;
+}
+
+.phone p {
+    padding: 0 10px;
+    color: #b9b9b9;
+    
 }
