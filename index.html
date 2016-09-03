@@ -29,7 +29,7 @@
            <main>
             <div class="col_1" id="tabs">
                   <ul>
-                    <li><a href="#tabs-1">Custom Native Tags</a></li>
+                    <li><a href="#tabs-1">Custom Native CSS</a></li>
                     <li><a href="#tabs-2">TBD</a></li>
                   </ul>
                     <div class="main" id="tabs-1">
@@ -38,7 +38,12 @@
                          <select class="custom_template" name="custom_template" >
                           <option selected="selected" value="default_code" class="def">Default</option>
                           <option value="template_1" class="one">LittleThings</option>
-                          <option value="template_2" class="two">Template #2</option>
+                          <option value="template_2" class="two">Legacy</option>
+                          <option value="template_3" class="three">Cooking Panda</option>
+                          <option value="template_4" class="four">Independent Journal</option>
+                          <option value="template_5" class="two">LifeBuzz Large Unit</option>
+                          <option value="template_6" class="two">Instant Articles Old School</option>
+                          <option value="template_7" class="two">Digg</option>
                         </select>
                         </div>
                         <div>
@@ -126,9 +131,17 @@
                           display: none;
                       }
                       
-                      .thirdPartyRoot:after {
-                          
+                      .fbAdBody {
+                          display: none;
                       }
+                      
+                      .thirdPartyMediaClass div:nth-child(even) {
+                        
+                        }
+                      .thirdPartyMediaClass div:nth-child(odd) {
+                        
+                        }
+
                     
                   </style>
                   <div class="thirdPartyRoot">
@@ -137,6 +150,7 @@
                     <div class="fbAdSubtitle thirdPartySubtitleClass"></div>
                     <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
                     <div class="fbAdTitle thirdPartyTitleClass"></div>
+                    <div class="fbAdBody"></div>
                 </div>
                 </div>
                 </div>
