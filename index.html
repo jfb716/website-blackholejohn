@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
+        <script src="jscolor.min.js"></script>
     </head>
     <body>
        <section>
@@ -28,207 +29,32 @@
            <main>
                <div class="col_1" id="tabs">
                   <ul>
-                    <li><a href="#tabs-1">Main Class</a></li>
-                    <li><a href="#tabs-2">Media Class</a></li>
-                    <li><a href="#tabs-3">Title Class</a></li>
-                    <li><a href="#tabs-4">Subtitle Class</a></li>
-                    <li><a href="#tabs-5">CTA Class</a></li>
-                    <li><a href="#tabs-6">Icon Class</a></li>
-                    <li><a href="#tabs-7">Full CSS</a></li>
+                    <li><a href="#tabs-1">Custom Native Tags</a></li>
+                    <li><a href="#tabs-2">TBD</a></li>
                   </ul>
-                <div class="main" id="tabs-1">
-                    <div class="cat_box">
-                    <label for="background_color_main">Background Color: </label>
-                     <select class="background_color_main" name="background_color_main" >
-                      <option selected="selected" value="white">white</option>
-                      <option value="black">black</option>
-                    </select>
-                    </div>
-                    <div class="cat_box">
-                    <label for="color_main">Font Color: </label>
-                     <select class="color_main" name="color_main" >
-                      <option selected="selected" value="#444">#444</option>
-                      <option value="#333">#333</option>
-                    </select>
-                    </div>
-                    <div class="cat_box">
-                    <label for="width_main">Ad Width: </label>
-                     <select class="width_main" name="width_main" >
-                      <option selected="selected" value="280px">280px</option>
-                      <option selected="selected" value="300px">300px</option>
-                      <option selected="selected" value="320px">320px</option>
-                    </select>
-                    </div>
-                    <div class="cat_box">
-                    <label for="height_main">Ad Height: </label>
-                     <select class="height_main" name="height_main" >
-                      <option value="230px">230px</option>
-                      <option selected="selected" value="250px">250px</option>
-                      <option value="270px">270px</option>
-                    </select>
-                    </div>
+                    <div class="main" id="tabs-1">
+                        <div class="cat_box">
+                        <label for="custom_template">Custom Template: </label>
+                         <select class="custom_template" name="custom_template" >
+                          <option selected="selected" value="default_code" class="def">Default</option>
+                          <option value="template_1" class="one">Template #1</option>
+                          <option value="template_2" class="two">Template #2</option>
+                        </select>
+                        </div>
+                        <div class="cat_box">
+                        <label for="placement_id" >Placement ID: </label>
+                            <input type="text" name="placement_id" placeholder="123456789_123456789" size="40"/>
+                        </div>
                         <div>
-                            <button class="main_button">Get CSS</button>
+                            <button class="main_button">Get Code</button>
                             <div class="main_result">&nbsp;</div>
                         </div>
-                </div>
+                    </div>
                 <div class="media" id="tabs-2">
                     john
                 </div>
-                  <div class="title" id="tabs-3">
-                   <div class="cat_box">
-                    <label for="font_size_title">Font Size: </label>
-                     <select class="font_size_title" name="font_size_title" >
-                      <option value="10px">10px</option>
-                      <option value="11px">11px</option>
-                      <option selected="selected" value="12px">12px</option>
-                      <option value="13px">13px</option>
-                      <option value="14px">14px</option>
-                      <option value="15px">15px</option>
-                      <option value="16px">16px</option>
-                      <option value="17px">17px</option>
-                      <option value="18px">18px</option>
-                    </select>
+                  
                     </div>
-                    <div class="cat_box">
-                    <label for="font_weight_title">Font Weight: </label>
-                     <select class="font_weight_title" name="font_weight_title" >
-                      <option value="100">100</option>
-                      <option value="200">200</option>
-                      <option value="300">300</option>
-                      <option selected="selected" value="400">400</option>
-                      <option value="500">500</option>
-                      <option value="600">600</option>
-                      <option value="700">700</option>
-                      <option value="800">800</option>
-                      <option value="900">900</option>
-                    </select>
-                    </div>
-                    <div class="cat_box">
-                    <label for="font_family_title">Font Family: </label>
-                     <select class="font_family_title" name="font_family_title" >
-                      <option value="one">"Palatino Linotype", "Book Antiqua", Palatino, serif</option>
-                      <option value="two">"Times New Roman", Times, serif</option>
-                      <option selected="selected" value="three">Arial, Helvetica, sans-serif</option>
-                      <option value="four">"Arial Black", Gadget, sans-serif</option>
-                      <option value="five">"Comic Sans MS", cursive, sans-serif</option>
-                      <option value="six">Impact, Charcoal, sans-serif</option>
-                      <option value="seven">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
-                      <option value="eight">Tahoma, Geneva, sans-serif</option>
-                      <option value="nine">"Trebuchet MS", Helvetica, sans-serif</option>
-                      <option value="ten">Verdana, Geneva, sans-serif</option>
-                      <option value="eleven">"Courier New", Courier, monospace"</option>
-                      <option value="twelve">"Lucida Console", Monaco, monospace</option>
-                    </select>
-                    </div>
-                    <div class="cat_box">
-                    <label for="margin_left_title">Margin Left: </label>
-                     <select class="margin_left_title" name="margin_left_title" >
-                     <option selected="selected" value="0">0px</option>
-                      <option value="1">2px</option>
-                      <option value="2">4px</option>
-                      <option value="3">6px</option>
-                      <option value="4">8px</option>
-                      <option value="5">10px</option>
-                      <option value="6">12px</option>
-                      <option value="7">14px</option>
-                      <option value="8">16px</option>
-                      <option value="9">18px</option>
-                      <option value="10">20px</option>
-                    </select>
-                    </div>
-                        <div>
-                            <button class="title_button">Get CSS</button>
-                            <div class="title_result">&nbsp;</div>
-                        </div>
-                      
-                    </div>
-
-                    <div class="subtitle" id="tabs-4">
-                    <div class="cat_box">
-                        <label for="font_size_subtitle">Font Size: </label>
-                         <select class="font_size_subtitle" name="font_size_subtitle" >
-                          <option value="10px">10px</option>
-                          <option value="11px">11px</option>
-                          <option value="12px">12px</option>
-                          <option value="13px">13px</option>
-                          <option value="14px">14px</option>
-                          <option value="15px">15px</option>
-                          <option value="16px">16px</option>
-                          <option value="17px">17px</option>
-                          <option selected="selected" value="18px">18px</option>
-                        </select>
-                    </div>
-                    <div class="cat_box">
-                        <label for="font_weight_subtitle">Font Weight: </label>
-                         <select class="font_weight_subtitle" name="font_weight_subtitle" >
-                          <option value="100">100</option>
-                          <option value="200">200</option>
-                          <option value="300">300</option>
-                          <option selected="selected" value="400">400</option>
-                          <option value="500">500</option>
-                          <option value="600">600</option>
-                          <option value="700">700</option>
-                          <option value="800">800</option>
-                          <option value="900">900</option>
-                        </select>
-                    </div>
-                    <div class="cat_box">
-                        <label for="font_family_subtitle">Font Family: </label>
-                         <select class="font_family_subtitle" name="font_family_subtitle" >
-                          <option value="one">"Palatino Linotype", "Book Antiqua", Palatino, serif</option>
-                          <option value="two">"Times New Roman", Times, serif</option>
-                          <option selected="selected" value="three">Arial, Helvetica, sans-serif</option>
-                          <option value="four">"Arial Black", Gadget, sans-serif</option>
-                          <option value="five">"Comic Sans MS", cursive, sans-serif</option>
-                          <option value="six">Impact, Charcoal, sans-serif</option>
-                          <option value="seven">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
-                          <option value="eight">Tahoma, Geneva, sans-serif</option>
-                          <option value="nine">"Trebuchet MS", Helvetica, sans-serif</option>
-                          <option value="ten">Verdana, Geneva, sans-serif</option>
-                          <option value="eleven">"Courier New", Courier, monospace"</option>
-                          <option value="twelve">"Lucida Console", Monaco, monospace</option>
-                        </select>
-                    </div>
-                    <div class="cat_box">
-                        <label for="margin_left_subtitle">Margin Left: </label>
-                         <select class="margin_left_subtitle" name="margin_left_subtitle">
-                         <option selected="selected" value="0">0px</option>
-                          <option value="1">2px</option>
-                          <option value="2">4px</option>
-                          <option value="3">6px</option>
-                          <option value="4">8px</option>
-                          <option value="5">10px</option>
-                          <option value="6">12px</option>
-                          <option value="7">14px</option>
-                          <option value="8">16px</option>
-                          <option value="9">18px</option>
-                          <option value="10">20px</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button class="subtitle_button">Get CSS</button>
-                        <div class="subtitle_result">&nbsp;</div>
-                    </div>
-                      
-                    </div>
-                    
-                    <div class="cta" id="tabs-5">
-                        john
-                    </div>
-                    
-                    <div class="icon" id="tabs-6">
-                        john
-                    </div>
-                    
-                    <div class="full_css" id="tabs-7">
-                        <div>
-                            <button class="full_button">Get CSS</button>
-                            <div class="full_result">&nbsp;</div>
-                        </div>
-                    </div>
-                   </div>
-                </div>
             <div class="col_2">
                <div class="ad_tag">
                 <div style="display:none; position: relative;">
@@ -297,23 +123,18 @@
                         text-transform: uppercase;
                         font-size: 11px;
                       }
-                      .fbDefaultNativeAdWrapper {
-                        font-size: 12px;
-                        line-height: 14px;
-                        margin: 12px 0;
-                        height: 36px;
-                        vertical-align: top;
+                      
+                      .fbAdIcon {
+                          display: none;
                       }
+                    
                   </style>
                   <div class="thirdPartyRoot">
-                  <a class="fbAdLink">
                     <div class="fbAdMedia thirdPartyMediaClass"></div>
+                    <div class="fbAdIcon"></div>
                     <div class="fbAdSubtitle thirdPartySubtitleClass"></div>
-                    <div class="fbDefaultNativeAdWrapper">
-                      <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
-                      <div class="fbAdTitle thirdPartyTitleClass"></div>
-                    </div>
-                  </a>
+                    <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
+                    <div class="fbAdTitle thirdPartyTitleClass"></div>
                 </div>
                 </div>
                 </div>

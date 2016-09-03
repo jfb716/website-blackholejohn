@@ -4,144 +4,146 @@ $(function() {
     $("#tabs").tabs();
 });
 
+
 /* ------ Main Code on Doc Ready ------- */
 
 $(document).ready(function(){
     
+    
+    $(".custom_template").change(function(){
+        var value = $(".custom_template").val();
+        console.log(value);
+            
+        if (value == "template_1") {
+            console.log("Template 1");
+            $(".thirdPartyRoot").css({"background-color": "white",
+                        "color": "#444",
+                        "border": "1px solid #ccc",
+                        "border-left": "0",
+                        "border-right": "0",
+                        "font-family": "sans-serif",
+                        "font-size": "14px",
+                        "line-height": "16px",
+                        "width": "300px",
+                        "height": "250px",
+                        "text-align": "left",
+                        "position": "relative"});
+            $(".thirdPartyMediaClass").css({"width": "300px",
+                        "height": "158px",
+                        "margin": "12px 0"});
+            $(".thirdPartySubtitleClass").css({"font-size": "18px",
+                        "-webkit-line-clamp": "1",
+                        "overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "display": "-webkit-box",
+                        "height": "16px",
+                        "-webkit-box-orient": "vertical"});
+            $(".thirdPartyTitleClass").css({"padding-right": "12px",
+                        "line-height": "18px",
+                        "-webkit-line-clamp": "2",
+                        "overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "display": "-webkit-box",
+                        "height": "36px",
+                        "-webkit-box-orient": "vertical"});
+            $(".thirdPartyCallToActionClass").css({"background-color": "#416BC4",
+                        "color": "white",
+                        "border-radius": "4px",
+                        "padding": "6px 20px",
+                        "float": "right",
+                        "text-align": "center",
+                        "text-transform": "uppercase",
+                        "font-size": "11px"});
+            $(".fbAdIcon").css({"display": "inline-block", "height": "20px", "width": "20px"});
+        } 
+        else if (value == "template_2"){
+            console.log("Template 2");
+            $(".thirdPartyRoot").css({"background-color": "white",
+                        "color": "#444",
+                        "border": "1px solid #ccc",
+                        "border-left": "0",
+                        "border-right": "0",
+                        "font-family": "sans-serif",
+                        "font-size": "14px",
+                        "line-height": "16px",
+                        "width": "320px",
+                        "text-align": "left",
+                        "position": "relative"});
+            $(".thirdPartyMediaClass").css({"width": "320px",
+                        "height": "168px",
+                        "margin": "12px 0"});
+            $(".thirdPartySubtitleClass").css({"font-size": "18px",
+                        "-webkit-line-clamp": "1",
+                        "overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "display": "-webkit-box",
+                        "height": "16px",
+                        "-webkit-box-orient": "vertical"});
+            $(".thirdPartyTitleClass").css({"padding-right": "12px",
+                        "line-height": "18px",
+                        "-webkit-line-clamp": "2",
+                        "overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "display": "-webkit-box",
+                        "height": "36px",
+                        "-webkit-box-orient": "vertical"});
+            $(".thirdPartyCallToActionClass").css({"background-color": "#416BC4",
+                        "color": "white",
+                        "border-radius": "4px",
+                        "padding": "6px 20px",
+                        "float": "right",
+                        "text-align": "center",
+                        "text-transform": "uppercase",
+                        "font-size": "11px"});
+            $(".fbAdIcon").css({"display": "none"});
+        }
+        else {
+            console.log("Default");
+            $(".thirdPartyRoot").css({"background-color": "white",
+                        "color": "#444",
+                        "border": "1px solid #ccc",
+                        "border-left": "0",
+                        "border-right": "0",
+                        "font-family": "sans-serif",
+                        "font-size": "14px",
+                        "line-height": "16px",
+                        "width": "320px",
+                        "text-align": "left",
+                        "position": "relative"});
+            $(".thirdPartyMediaClass").css({"width": "320px",
+                        "height": "168px",
+                        "margin": "12px 0"});
+            $(".thirdPartySubtitleClass").css({"font-size": "18px",
+                        "-webkit-line-clamp": "1",
+                        "overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "display": "-webkit-box",
+                        "height": "16px",
+                        "-webkit-box-orient": "vertical"});
+            $(".thirdPartyTitleClass").css({"padding-right": "12px",
+                        "line-height": "18px",
+                        "-webkit-line-clamp": "2",
+                        "overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "display": "-webkit-box",
+                        "height": "36px",
+                        "-webkit-box-orient": "vertical"});
+            $(".thirdPartyCallToActionClass").css({"background-color": "#416BC4",
+                        "color": "white",
+                        "border-radius": "4px",
+                        "padding": "6px 20px",
+                        "float": "right",
+                        "text-align": "center",
+                        "text-transform": "uppercase",
+                        "font-size": "11px"});
+            $(".fbAdIcon").css({"display": "none"});
+        }
+    });
 
-/* ------ Main Background Color ------- */
     
-  $(".background_color_main").change(function() {
-  console.log( "Handler for font size called." );
-      var color = "";
-    $( ".background_color_main option:selected" ).each(function() {
-      color += $(this).text() + " ";
-        console.log(color);
-    });
-    $(".thirdPartyRoot").css('background-color', color);
-});  
+});
     
-/* ------ Main Font Color ------- */
-
-    $(".color_main").change(function() {
-  console.log( "Handler for font weight called." );
-      var color_font = "";
-    $( ".color_main option:selected" ).each(function() {
-      color_font += $(this).text() + " ";
-        console.log(color_font);
-    });
-    $(".thirdPartyRoot").css('color', color_font);
-});  
-    
-/* ------ Main Ad Width ------- */
-    
-    $(".width_main").change(function() {
-  console.log( "Handler for font family called." );
-      var width = "";
-    $( ".width_main option:selected" ).each(function() {
-      width += $(this).text() + " ";
-        console.log(width);
-    });
-    $(".thirdPartyRoot").css('width', width);
-}); 
-    
-/* ------ Main Ad Height ------- */
-    
-    $(".height_main").change(function() {
-  console.log( "Handler for margin left called." );
-      var height = "";
-    $( ".height_main option:selected" ).each(function() {
-      height += $(this).text() + " ";
-        console.log(height);
-    });
-    $(".thirdPartyRoot").css('height', height);
-});     
-    
-/* ------ Font Size Title ------- */
-    
-  $(".font_size_title").change(function() {
-  console.log( "Handler for font size called." );
-      var size = "";
-    $( ".font_size_title option:selected" ).each(function() {
-      size += $(this).text() + " ";
-        console.log(size);
-    });
-    $(".thirdPartyTitleClass").css('font-size', size);
-});  
-    
-/* ------ Font Weight Title ------- */
-
-    $(".font_weight_title").change(function() {
-  console.log( "Handler for font weight called." );
-      var weight = "";
-    $( ".font_weight_title option:selected" ).each(function() {
-      weight += $(this).text() + " ";
-        console.log(weight);
-    });
-    $(".thirdPartyTitleClass").css('font-weight', weight);
-});  
-    
-/* ------ Font Family Title ------- */
-    
-    $(".font_family_title").change(function() {
-  console.log( "Handler for font family called." );
-      var family = "";
-    $( ".font_family_title option:selected" ).each(function() {
-      family += $(this).text() + " ";
-        console.log(family);
-    });
-    $(".thirdPartyTitleClass").css('font-family', family);
-}); 
-    
-/* ------ Margin Left Title ------- */
-    
-    $(".margin_left_title").change(function() {
-  console.log( "Handler for margin left called." );
-      var mleft = "";
-    $( ".margin_left_title option:selected" ).each(function() {
-      mleft += $(this).text() + " ";
-        console.log(mleft);
-    });
-    $(".thirdPartyTitleClass").css('margin-left', mleft);
-}); 
-    
-/* ------ Font Size Subtitle ------- */
-    
-  $(".font_size_subtitle").change(function() {
-  console.log( "Handler for font size called." );
-      var size = "";
-    $( ".font_size_subtitle option:selected" ).each(function() {
-      size += $(this).text() + " ";
-        console.log(size);
-    });
-    $(".thirdPartySubtitleClass").css('font-size', size);
-});  
-    
-/* ------ Font Weight Subtitle ------- */
-
-    $(".font_weight_subtitle").change(function() {
-  console.log( "Handler for font weight called." );
-      var weight = "";
-    $( ".font_weight_subtitle option:selected" ).each(function() {
-      weight += $(this).text() + " ";
-        console.log(weight);
-    });
-    $(".thirdPartySubtitleClass").css('font-weight', weight);
-});  
-    
-/* ------ Font Family Subtitle ------- */
-    
-    $(".font_family_subtitle").change(function() {
-  console.log( "Handler for font family called." );
-      var family = "";
-    $( ".font_family_subtitle option:selected" ).each(function() {
-      family += $(this).text() + " ";
-        console.log(family);
-    });
-    $(".thirdPartySubtitleClass").css('font-family', family);
-}); 
-    
-/* ------ Margin Left Subtitle ------- */
+/* ------ Margin Left Subtitle ------- 
     
     $(".margin_left_subtitle").change(function() {
   console.log( "Handler for margin left called." );
@@ -153,45 +155,10 @@ $(document).ready(function(){
     $(".thirdPartySubtitleClass").css('margin-left', mleft);
 }); 
     
-});
+*/
 
 
-/* ------ Main CSS Print ------- */
-
-$(function(){
-    $( ".main_button" ).click(function() {
-      var htmlOne = [ ".thirdPartyRoot {" ];
-      var htmlTwo = [ "}" ];
-      var styleProps = $(".thirdPartyRoot").css([
-        "background-color", "color", "border", "bornder-left", "border-right", "font-family", "font-size", "line-height", "width", "height", "text-align", "position"
-      ]);
-    $.each( styleProps, function( prop, value ) {
-    htmlOne.push( prop + ": " + value +";");
-    });
-    var final = [htmlOne.join("<br>")];   
-    $( ".main_result" ).html(final + "<br>" + htmlTwo);
-    });
-});
-
-
-/* ------ Title CSS Print ------- */
-
-$(function(){
-    $( ".title_button" ).click(function() {
-      var htmlOne = [ ".thirdPartyTitleClass {" ];
-      var htmlTwo = [ "}" ];
-      var styleProps = $(".thirdPartyTitleClass").css([
-        "font-size", "font-weight", "font-family", "margin-left", "padding-right", "-webkit-line-clamp", "overflow", "text-overflow", "display", "height", "webkit-box-orient"
-      ]);
-    $.each( styleProps, function( prop, value ) {
-    htmlOne.push( prop + ": " + value +";");
-    });
-    var final = [htmlOne.join("<br>")];   
-    $( ".title_result" ).html(final + "<br>" + htmlTwo);
-    });
-});
-
-/* ------ Subtitle CSS Print ------- */
+/* ------ Subtitle CSS Print ------- 
 
 $(function(){
     $( ".subtitle_button" ).click(function() {
@@ -207,3 +174,18 @@ $(function(){
     $( ".subtitle_result" ).html(final + "<br>" + htmlTwo);
     });
 });
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
