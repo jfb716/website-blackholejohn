@@ -141,6 +141,73 @@ $(document).ready(function(){
     });
 
     
+    
+    
+    $(function(){
+       $(".main_button").click(function(){
+         console.log("You clicked the Main Button!");
+           var rootOne = [ ".thirdPartyRoot {"];
+           var rootTwo = [ "}"];
+           var rootStyles = $(".thirdPartyRoot").css(["font-size", "font-weight", "font-family", "margin-left", "padding-right", "-webkit-line-clamp", "overflow", "text-overflow", "display", "height", "webkit-box-orient"]);
+            $.each( rootStyles, function(prop, value) {
+            rootOne.push( prop + ": " + value +";");
+            });
+            var rootFinal = [rootOne.join("<br>")];   
+           
+           
+           var mediaOne = [ ".thirdPartyMediaClass {"];
+           var mediaTwo = [ "}"];
+           var mediaStyles = $(".thirdPartyMediaClass").css(["font-size", "font-weight", "font-family", "margin-left", "padding-right", "-webkit-line-clamp", "overflow", "text-overflow", "display", "height", "webkit-box-orient"]);
+            $.each( mediaStyles, function(prop, value) {
+            mediaOne.push( prop + ": " + value +";");
+            });
+            var mediaFinal = [mediaOne.join("<br>")];   
+           
+           
+           var subtitleOne = [ ".thirdPartySubtitleClass {"];
+           var subtitleTwo = [ "}"];
+           var subtitleStyles = $(".thirdPartySubtitleClass").css(["font-size", "font-weight", "font-family", "margin-left", "padding-right", "-webkit-line-clamp", "overflow", "text-overflow", "display", "height", "webkit-box-orient"]);
+            $.each( subtitleStyles, function(prop, value) {
+            subtitleOne.push( prop + ": " + value +";");
+            });
+            var subtitleFinal = [subtitleOne.join("<br>")];  
+           
+           
+           var titleOne = [ ".thirdPartyTitleClass {"];
+           var titleTwo = [ "}"];
+           var titleStyles = $(".thirdPartyTitleClass").css(["font-size", "font-weight", "font-family", "margin-left", "padding-right", "-webkit-line-clamp", "overflow", "text-overflow", "display", "height", "webkit-box-orient"]);
+            $.each( titleStyles, function(prop, value) {
+            titleOne.push( prop + ": " + value +";");
+            });
+            var titleFinal = [titleOne.join("<br>")];  
+           
+           
+           var callOne = [ ".thirdPartyCallToActionClass {"];
+           var callTwo = [ "}"];
+           var callStyles = $(".thirdPartyCallToActionClass").css(["font-size", "font-weight", "font-family", "margin-left", "padding-right", "-webkit-line-clamp", "overflow", "text-overflow", "display", "height", "webkit-box-orient"]);
+            $.each( callStyles, function(prop, value) {
+            callOne.push( prop + ": " + value +";");
+            });
+            var callFinal = [callOne.join("<br>")];  
+           
+           
+           var iconOne = [ ".fbAdIcon {"];
+           var iconTwo = [ "}"];
+           var iconStyles = $(".fbAdIcon").css(["font-size", "font-weight", "font-family", "margin-left", "padding-right", "-webkit-line-clamp", "overflow", "text-overflow", "display", "height", "webkit-box-orient"]);
+            $.each( iconStyles, function(prop, value) {
+            iconOne.push( prop + ": " + value +";");
+            });
+            var iconFinal = [iconOne.join("<br>")]; 
+           
+           
+            $( ".main_result" ).html(rootFinal + "<br>" + rootTwo + "<br>" + "<br>" + mediaFinal + "<br>" + mediaTwo + "<br>" + "<br>" + subtitleFinal + "<br>" + subtitleTwo + "<br>" + "<br>" + titleFinal + "<br>" + titleTwo + "<br>" + "<br>" + callFinal + "<br>" + callTwo + "<br>" + "<br>" + iconFinal + "<br>" + iconTwo);
+       });
+    });
+    
+    
+    
+    
+    
 });
     
 /* ------ Margin Left Subtitle ------- 

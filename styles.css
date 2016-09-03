@@ -1,5 +1,5 @@
 main {
-    height: 800px;
+    height: 1500px;
 }
 
 .col_1 {
@@ -40,13 +40,14 @@ select {
     clear: both;
 }
 
-.title_result, .subtitle_result, .full_result, .main_result {
-    height: 500px;
+.main_result {
+    height: 1300px;
     width: 100%;
     padding: 20px;
     background-color: black;
     color: rgb(150, 1, 1);
     box-sizing: border-box;
+    font-size: 12px;
 }
 
 .ad_tag {
