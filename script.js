@@ -9,14 +9,25 @@ $(function () {
 
 $(document).ready(function (){
     
+    
+/* ------ Site Color Toggle ------ */
+    
+$(".toggle_blk").click(function(){
+    $(".phone").css({"background-color": "black"})
+});
+
+$(".toggle_wht").click(function(){
+    $(".phone").css({"background-color": "white"})
+});
+    
 /* ------ CSS Update Code Keying Off Value Passed in the Dropdown ------- */
     
     $(".custom_template").change(function (){
         
         $( ".main_result" ).empty();
         $(".thirdPartyRoot, .thirdPartyMediaClass, .thirdPartySubtitleClass, .thirdPartyTitleClass, .thirdPartyCallToActionClass, .fbAdIcon, .thirdPartyRoot, .ad_tag, .phone").removeAttr('style');
-        $(".thirdPartyMediaClass div:nth-child(even)").removeAttr({"background-color": "transparent !important"});
-        $(".thirdPartyMediaClass div:nth-child(odd)").removeAttr({"background-color": "#191919 !important"});
+        $(".thirdPartyMediaClass div:nth-child(even)").removeAttr('background-color');
+        $(".thirdPartyMediaClass div:nth-child(odd)").removeAttr('background-color');
 
         var value = $(".custom_template").val();
         console.log(value);
@@ -44,7 +55,7 @@ $(document).ready(function (){
                         "overflow": "hidden",
                         "text-overflow": "ellipsis",
                         "display": "-webkit-box",
-                        "height": "20px",
+                        "height": "35px",
                         "line-height": "24px",
                         "-webkit-box-orient": "vertical"});
             $(".thirdPartyTitleClass").css({"padding-right": "12px",
@@ -59,7 +70,7 @@ $(document).ready(function (){
                         "-webkit-box-orient": "vertical"});
             $(".thirdPartyCallToActionClass").css({"background-color": "#fbb11e",
                         "color": "#fff",
-                        "border-radius": "4px",
+                        "border-radius": "0",
                         "padding": "5px 10px",
                         "font-weight": "500",
                         "float": "right",
@@ -129,6 +140,7 @@ $(document).ready(function (){
         
          else if (value == "template_3") {
             console.log("Cooking Panda");
+             $(".ad_tag").css({"margin-left": "30px"});
             $(".thirdPartyRoot").css({"background-color": "#191919",
                         "color": "#ffffff",
                         "border": "none",
@@ -182,6 +194,99 @@ $(document).ready(function (){
             $(".thirdPartyMediaClass div:nth-child(odd)").css({"background-color": "#191919 !important"});
             $(".fbAdBody").css({"display": "none"});
         }
+        
+        
+        else if (value == "template_6") {
+            console.log("Instant Articles Old School");
+             $(".ad_tag").css({"margin-left": "30px"});
+            $(".thirdPartyRoot").css({"height": "248px", 
+                        "line-height": "16px",
+                        "position": "relative",
+                        "width": "298px",
+                        "border-style": "solid",
+                        "border-color": "#e5e5e5",
+                        "border-width": "1px"});
+            $(".thirdPartyMediaClass").css({"width": "298px", 
+                        "height": "167px"});
+            $(".thirdPartySubtitleClass").css({"display": "none"});
+            $(".thirdPartyTitleClass").css({"font-family": "Arial, Helvetica, sans-serif",
+                        "color": "#4a657a",
+                        "font-size": "16px",
+                        "font-weight": "bold",
+                        "line-height": "15px",
+                        "overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "height": "20px",
+                        "padding-top": "10px",
+                        "white-space": "nowrap",
+                        "margin": "10px 5px 0 5px"});
+            $(".thirdPartyCallToActionClass").css({"font-family": "Arial,  Helvetica,  sans-serif",
+                        "font-size": "14px",
+                        "font-weight": "bold",
+                        "background-color": "white",
+                        "border-radius": "0",
+                        "text-transform": "uppercase",
+                        "border-style": "solid",
+                        "border-color": "#e5e5e5",
+                        "border-width": "1px",
+                        "color": "#4a657a",
+                        "padding": "2px 0 2px 0",
+                        "text-align": "center",
+                        "max-width": "100px",
+                        "float": "right",
+                        "margin": "5px"});
+            $(".fbAdIcon").css({"display": "none"});
+            $(".fbAdBody").css({"font-family": "Arial,  Helvetica,  sans-serif", 
+                        "font-size": "14px",
+                        "margin": "4px",
+                        "display": "inline-block",
+                        "width": "280px",
+                        "height": "32px",
+                        "overflow": "hidden",
+                        "color": "#333333",
+                        "margin": "5px"});
+        }
+        
+        
+        else if (value == "template_7") {
+            console.log("Digg");
+             $(".ad_tag").css({"margin-left": "30px"});
+            $(".thirdPartyRoot").css({"background-color": "white", 
+                        "border": "none",
+                        "font-size": "14px",
+                        "line-height": "16px",
+                        "width": "300px",
+                        "height": "250px",
+                        "position": "relative"});
+            $(".thirdPartyMediaClass").css({"width": "300px", 
+                        "height": "157px",
+                        "margin": "12px 0"});
+            $(".thirdPartySubtitleClass").css({"display": "none"});
+            $(".thirdPartyTitleClass").css({"font-family": "'Graphik Web','Helvetica Neue',Helvetica,Arial,sans-serif",
+                        "font-weight": "700",
+                        "line-height": "24px",
+                        "-webkit-line-clamp": "2",
+                        "overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "height": "50px",
+                        "display": "-webkit-box",
+                        "margin": "8px 0 4px 0",
+                        "color": "#191919",
+                        "font-size": "21px"});
+            $(".thirdPartyCallToActionClass").css({"color": "#fd9127",
+                        "font-family": "'Graphik Web','Helvetica Neue',Helvetica,Arial,sans-serif",
+                        "font-weight": "700",
+                        "padding": "0",
+                        "font-size": "12px",
+                        "margin-top": "50px",
+                        "float": "right",
+                        "text-align": "center",
+                        "background-color": "white",
+                        "text-transform": "uppercase"});
+            $(".fbAdIcon").css({"display": "none"});
+            $(".fbAdBody").css({"display": "none"});
+        }
+        
         
         else {
             console.log("Default");
@@ -429,6 +534,103 @@ $(document).ready(function (){
             $( ".main_result" ).html(rootFinal + "<br>" + rootTwo + "<br>" + "<br>" + mediaFinal + "<br>" + mediaTwo + "<br>" + "<br>" + iconFinal + "<br>" + iconTwo + "<br>" + "<br>" + subtitleFinal + "<br>" + subtitleTwo + "<br>" + "<br>" + titleFinal + "<br>" + titleTwo + "<br>" + "<br>" + callFinal + "<br>" + callTwo + "<br>" + "<br>" + evenFinal + "<br>" + evenTwo + "<br>" + "<br>" + oddFinal + "<br>" + oddTwo);
         }
            
+           
+           
+           else if (value == "template_6"){
+            console.log("Print Instant Articles Old School CSS");
+            
+            var rootOne = [ ".thirdPartyRoot {"];
+            var rootTwo = [ "}"];
+            var rootStyles = $(".thirdPartyRoot").css(["height", "line-height", "position", "width", "border-style", "border-color", "border-width"]);
+            $.each( rootStyles, function(prop, value) {
+            rootOne.push( prop + ": " + value +";");
+            });
+            var rootFinal = [rootOne.join("<br>")];   
+               
+               
+            var mediaOne = [ ".thirdPartyMediaClass {"];
+           var mediaTwo = [ "}"];
+           var mediaStyles = $(".thirdPartyMediaClass").css(["width", "height"]);
+            $.each( mediaStyles, function(prop, value) {
+            mediaOne.push( prop + ": " + value +";");
+            });
+            var mediaFinal = [mediaOne.join("<br>")];  
+           
+           
+           var titleOne = [ ".thirdPartyTitleClass {"];
+           var titleTwo = [ "}"];
+           var titleStyles = $(".thirdPartyTitleClass").css(["font-family", "color", "font-size", "margin", "font-weight", "line-height", "overflow", "text-overflow", "white-space", "margin"]);
+            $.each( titleStyles, function(prop, value) {
+            titleOne.push( prop + ": " + value +";");
+            });
+            var titleFinal = [titleOne.join("<br>")];  
+           
+           
+           var callOne = [ ".thirdPartyCallToActionClass {"];
+           var callTwo = [ "}"];
+           var callStyles = $(".thirdPartyCallToActionClass").css(["font-family", "font-weight", "font-size", "text-transform", "border-style", "border-color", "border-width", "color", "padding", "text-align", "max-width", "float", "margin"]);
+            $.each( callStyles, function(prop, value) {
+            callOne.push( prop + ": " + value +";");
+            });
+            var callFinal = [callOne.join("<br>")];  
+               
+            
+            var bodyOne = [ ".fbAdBody {"];
+           var bodyTwo = [ "}"];
+           var bodyStyles = $(".fbAdBody").css(["font-family", "font-size", "margin", "width", "height", "overflow", "color", "margin"]);
+            $.each(bodyStyles, function(prop, value) {
+            bodyOne.push( prop + ": " + value +";");
+            });
+            var bodyFinal = [bodyOne.join("<br>")];  
+               
+               
+           
+            $( ".main_result" ).html(rootFinal + "<br>" + rootTwo + "<br>" + "<br>" + mediaFinal + "<br>" + mediaTwo + "<br>" + "<br>" + titleFinal + "<br>" + titleTwo + "<br>" + "<br>" + callFinal + "<br>" + callTwo + "<br>" + "<br>" + bodyFinal + "<br>" + bodyTwo);
+        }
+           
+           
+           
+           else if (value == "template_7"){
+            console.log("Print Digg CSS");
+            
+            var rootOne = [ ".thirdPartyRoot {"];
+            var rootTwo = [ "}"];
+            var rootStyles = $(".thirdPartyRoot").css(["font-size", "line-height", "width", "height", "position"]);
+            $.each( rootStyles, function(prop, value) {
+            rootOne.push( prop + ": " + value +";");
+            });
+            var rootFinal = [rootOne.join("<br>")];   
+               
+               
+            var mediaOne = [ ".thirdPartyMediaClass {"];
+           var mediaTwo = [ "}"];
+           var mediaStyles = $(".thirdPartyMediaClass").css(["width", "height"]);
+            $.each( mediaStyles, function(prop, value) {
+            mediaOne.push( prop + ": " + value +";");
+            });
+            var mediaFinal = [mediaOne.join("<br>")];  
+           
+           
+           var titleOne = [ ".thirdPartyTitleClass {"];
+           var titleTwo = [ "}"];
+           var titleStyles = $(".thirdPartyTitleClass").css(["font-weight", "font-family", "color", "font-size", "line-height", "display", "margin"]);
+            $.each( titleStyles, function(prop, value) {
+            titleOne.push( prop + ": " + value +";");
+            });
+            var titleFinal = [titleOne.join("<br>")];  
+           
+           
+           var callOne = [ ".thirdPartyCallToActionClass {"];
+           var callTwo = [ "}"];
+           var callStyles = $(".thirdPartyCallToActionClass").css(["color", "font-family", "font-weight", "font-size", "float", "text-transform", "margin-top"]);
+            $.each( callStyles, function(prop, value) {
+            callOne.push( prop + ": " + value +";");
+            });
+            var callFinal = [callOne.join("<br>")];  
+               
+           
+            $( ".main_result" ).html(rootFinal + "<br>" + rootTwo + "<br>" + "<br>" + mediaFinal + "<br>" + mediaTwo + "<br>" + "<br>" + titleFinal + "<br>" + titleTwo + "<br>" + "<br>" + callFinal + "<br>" + callTwo);
+        }
            
            
            
