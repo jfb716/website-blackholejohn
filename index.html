@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" ng-app>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
-        <script src="jscolor.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     </head>
     <body>
        <section>
@@ -29,37 +29,105 @@
            <main>
             <div class="col_1" id="tabs">
                   <ul>
-                    <li><a href="#tabs-1">Custom Native CSS</a></li>
-                    <li><a href="#tabs-2">TBD</a></li>
+                    <li><a href="#tabs-1" class="tabby_1">MWeb Native CSS Tool</a></li>
+                    <li><a href="#tabs-2" class="tabby_2">MWeb Passback Tool</a></li>
                   </ul>
                     <div class="main" id="tabs-1">
                         <div class="cat_box">
                         <label for="custom_template">Custom Template: </label>
-                         <select class="custom_template" name="custom_template" >
+                         <select class="custom_template menu" name="custom_template">
                           <option selected="selected" value="default_code" class="def">Default</option>
                           <option value="template_1" class="one">LittleThings</option>
                           <option value="template_2" class="two">Legacy</option>
                           <option value="template_3" class="three">Cooking Panda</option>
                           <option value="template_4" class="four">Independent Journal</option>
-                          <option value="template_5" class="two">LifeBuzz Large Unit</option>
-                          <option value="template_6" class="two">Instant Articles Old School</option>
-                          <option value="template_7" class="two">Digg</option>
+                          <option value="template_5" class="five">LifeBuzz Large Unit</option>
+                          <option value="template_6" class="six">Instant Articles Old School</option>
+                          <option value="template_7" class="seven">Digg</option>
                         </select>
                         </div>
+                        <hr>
                         <div class="cat_box">
                         <label for="site_color">Site Color: </label>
-                         <button class="toggle_blk">Black</button>
-                         <button class="toggle_wht">White</button>
+                         <button class="toggle_blk button" title="Make site background Black">Black</button>
+                         <button class="toggle_wht button" title="Make site background White">White</button>
                         </div>
+                        <hr>
+                        <div class="cat_box">
+                        <label for="adchoice_color">AdChoice Color: </label>
+                         <button class="adchoice_blk button" title="Make AdChoices Icon Black">Black</button>
+                         <button class="adchoice_wht button" title="Make AdChoices Icon White">White</button>
+                        </div>
+                        <hr>
                         <div>
-                            <button class="main_button">Get CSS</button>
+                            <button class="main_button button" title="Print out CSS for the unit displayed to the right">Get CSS</button>
                             <div class="main_result">&nbsp;</div>
                         </div>
                     </div>
-                <div class="media" id="tabs-2">
-                    john
-                </div>
-                  
+                    <div class="media" id="tabs-2">
+                    <div class="cat_box">
+                        <label for="passback_type">Passback Type: </label>
+                         <select class="passback_type menu" name="passback_type">
+                          <option selected="selected" value="dfp_code" class="dfp">DFP</option>
+                          <option value="passback_1" class="one">AdX</option>
+                          <option value="passback_2" class="two">AdSense</option>
+                          <option value="passback_3" class="three">Rubicon</option>
+                        </select>
+                        </div>           
+                        <hr>
+                        <label for="placement_input">Placement ID Input:</label>
+                        <input class="placement_input" type="text" ng-model="yourPlacementId">
+                        <br>
+                        <hr>
+                        <div class="cat_box">
+                        <label for="format_type">Format Type: </label>
+                         <select class="format_type menu" name="format_type" ng-model="yourFormat">
+                          <option selected="selected" value="300x250" class="box">300x250</option>
+                          <option value="320x50" class="banner">320x50</option>
+                          <option value="native" class="native">native</option>
+                        </select>
+                        </div>
+                        <hr>
+                        <div class="cat_box">
+                        <label for="test_mode">Test Mode: </label>
+                         <select class="test_mode menu" name="test_mode" ng-model="yourTestMode">
+                          <option selected="selected" value="true" class="true">true</option>
+                          <option value="false" class="false">false</option>
+                        </select>
+                        </div>
+                        <hr>
+                        <label for="passback_input">Passback Input:</label>
+                        <br>
+                        <textarea class="passback_input textbox_1"></textarea>
+                        <br>
+                        <button class="passback_button button" title="Insert Passback into tag">Insert Passback</button>
+                        <hr>
+                        <div>
+                            <label>Tag Code: </label>
+                            <br>
+                            <div class="passback_result">
+                                &lt;div style="display:none; position: relative;"&gt;<br />
+                                  &lt;iframe style="display:none;"&gt;&lt;/iframe&gt;<br />
+                                  &lt;script type="text/javascript"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp;var data = {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placementid: '{{yourPlacementId}}',<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;format: '{{yourFormat}}',<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;testmode: {{yourTestMode}},<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onAdLoaded: function(element) {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Audience Network ad loaded');<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.display = 'block';<br />
+                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />
+                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onAdError: function(errorCode, errorMessage) {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Audience Network error (' + errorCode + ') ' + errorMessage);<br />
+                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                    &nbsp;&nbsp;&nbsp;};<br />
+                                    (function(w,l,d,t){var a=t();var b=d.currentScript||(function(){var c=d.getElementsByTagName('script');return c[c.length-1];})();var e=b.parentElement;e.dataset.placementid=data.placementid;var f=function(v){try{return v.document.referrer;}catch(e){}return'';};var g=function(h){var i=h.indexOf('/',h.indexOf('://')+3);if(i===-1){return h;}return h.substring(0,i);};var j=[l.href];var k=false;var m=false;if(w!==w.parent){var n;var o=w;while(o!==n){var h;try{m=m||(o.$sf&amp;&amp;o.$sf.ext);h=o.location.href;}catch(e){k=true;}j.push(h||f(n));n=o;o=o.parent;}}var p=l.ancestorOrigins;if(p){if(p.length&gt;0){data.domain=p[p.length-1];}else{data.domain=g(j[j.length-1]);}}data.url=j[j.length-1];data.channel=g(j[0]);data.width=screen.width;data.height=screen.height;data.pixelratio=w.devicePixelRatio;data.placementindex=w.ADNW&amp;&amp;w.ADNW.Ads?w.ADNW.Ads.length:0;data.crossdomain=k;data.safeframe=!!m;var q={};q.iframe=e.firstElementChild;var r='https://www.facebook.com/audiencenetwork/web/?sdk=5.3';for(var s in data){q[s]=data[s];if(typeof(data[s])!=='function'){r+='&amp;'+s+'='+encodeURIComponent(data[s]);}}q.iframe.src=r;q.tagJsInitTime=a;q.rootElement=e;q.events=[];w.addEventListener('message',function(u){if(u.source!==q.iframe.contentWindow){return;}u.data.receivedTimestamp=t();if(this.sdkEventHandler){this.sdkEventHandler(u.data);}else{this.events.push(u.data);}}.bind(q),false);q.tagJsIframeAppendedTime=t();w.ADNW=w.ADNW||{};w.ADNW.Ads=w.ADNW.Ads||[];w.ADNW.Ads.push(q);w.ADNW.init&amp;&amp;w.ADNW.init(q);})(window,location,document,Date.now||function(){return+new Date;});<br />
+                                  &lt;/script&gt;<br />
+                                  &lt;script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw.js" async&gt;&lt;/script&gt;<br />
+                                &lt;/div&gt;
+                            </div>
+                        </div>
+                    </div>
             </div>
             <div class="col_2">
               <div class="phone">

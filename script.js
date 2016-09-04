@@ -9,6 +9,29 @@ $(function () {
 
 $(document).ready(function (){
     
+
+/* ------ Hide Phone on Other Tab Clicks ------ */
+
+
+$(".tabby_1").click(function(){
+   location.reload(); 
+});
+    
+$(".tabby_2").click(function(){
+   $(".phone").css({"display": "none"}) 
+});
+    
+/* ------ Tooltips ------- */
+
+
+$(document).tooltip();
+
+    
+/* ------- Buttons ------- */
+    
+
+$( ".button" ).button();
+
     
 /* ------ Site Color Toggle ------ */
     
@@ -19,6 +42,21 @@ $(".toggle_blk").click(function(){
 $(".toggle_wht").click(function(){
     $(".phone").css({"background-color": "white"})
 });
+    
+    
+    
+    /* ------ AdChoice Color Toggle ------ */
+    
+$(".adchoice_blk").click(function(){
+    $(".fbAdChoices").css({"background-color": "black"})
+});
+
+$(".adchoice_wht").click(function(){
+    $(".fbAdChoices").css({"background-color": "transparent"})
+    $(".fbAdChoices img").css({"background-color": "transparent"})
+});
+    
+    
     
 /* ------ CSS Update Code Keying Off Value Passed in the Dropdown ------- */
     

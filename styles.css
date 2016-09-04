@@ -1,5 +1,5 @@
 main {
-    height: 1500px;
+    height: 1600px;
 }
 
 .col_1 {
@@ -16,7 +16,7 @@ main {
     height: 100%;
     box-sizing: border-box;
     background-color: lightgray;
-
+    
 }
 
 
@@ -43,8 +43,8 @@ select {
     height: 1300px;
     width: 100%;
     padding: 20px;
-    background-color: black;
-    color: rgb(150, 1, 1);
+    background-color: lightgray;
+    color: rgb(13, 13, 13);
     box-sizing: border-box;
     font-size: 12px;
 }
@@ -80,3 +80,44 @@ select {
     padding: 0 10px;
     color: #b9b9b9;
 }
+
+
+.placement_input {
+    border: 5px ridge;
+    width: 355px;
+}
+
+.textbox_1 {
+    height: 200px;
+    width: 500px;
+    border: 5px ridge;
+}
+
+
+
+.passback_result {
+    height: 1000px;
+    width: 100%;
+    padding: 20px;
+    background-color: lightgray;
+    color: rgb(13, 13, 13);
+    box-sizing: border-box;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
