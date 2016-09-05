@@ -288,6 +288,60 @@ $(".adchoice_wht").click(function(){
         }
         
         
+        else if (value == "template_4") {
+            console.log("Independent Journal");
+             $(".ad_tag").css({"margin-left": "10px"});
+            $(".phone").css({"height": "550px"});
+            $(".thirdPartyRoot").css({"font-size": "13px",
+                        "height": "120px",
+                        "line-height": "16px",
+                        "position": "relative",
+                        "padding": "0 5px",
+                        "border-bottom": "solid 1px #dedede",
+                        "border-top": "solid 1px #dedede"});
+            $(".thirdPartyMediaClass div:nth-child(2)").css({"width": "66px !important",
+                        "height": "66px !important"});
+            $(".thirdPartyMediaClass").css({"width": "120px", 
+                        "height": "90px",
+                        "display": "inline-block",
+                        "float": "left",
+                        "margin-left": "15px"});
+            $(".thirdPartyTitleClass").css({"overflow": "hidden",
+                        "text-overflow": "ellipsis",
+                        "white-space": "nowrap",
+                        "padding": "0 0 0 10px",
+                        "height": "20px",
+                        "line-height": "18px",
+                        "font-size": "14px",
+                        "font-weight": "bold",
+                        "text-transform": "capitalize",
+                        "font-family": "Helvetica, Arial, sans-serif",
+                        "text-rendering": "optimizelegibility",
+                        "clear": "right"});
+            $(".thirdPartySubtitleClass").css({"display": "none"});
+            $(".thirdPartyCallToActionClass").css({"font-family": "sans-serif",
+                        "margin": "10px",
+                        "padding": "4px 5px",
+                        "font-weight": "bold",
+                        "color": "#fff",
+                        "background-color": "#2c3161",
+                        "text-transform": "uppercase",
+                        "font-size": "11px",
+                        "float": "right"});
+            $(".fbAdIcon").css({"display": "none"});
+            $(".fbAdBody").css({"display": "-webkit-box",
+                        "height": "30px",
+                        "-webkit-line-clamp": "2",
+                        "overflow": "hidden",
+                        "padding-left": "10px",
+                        "font-weight": "500",
+                        "text-transform": "capitalize",
+                        "font-family": "Helvetica, Arial, sans-serif",
+                        "text-rendering": "optimizelegibility"});
+        }
+        
+        
+        
         else if (value == "template_6") {
             console.log("Instant Articles Old School");
              $(".ad_tag").css({"margin-left": "30px"});
@@ -625,6 +679,64 @@ $(".adchoice_wht").click(function(){
            
             $( ".main_result" ).html(rootFinal + "<br>" + rootTwo + "<br>" + "<br>" + mediaFinal + "<br>" + mediaTwo + "<br>" + "<br>" + iconFinal + "<br>" + iconTwo + "<br>" + "<br>" + subtitleFinal + "<br>" + subtitleTwo + "<br>" + "<br>" + titleFinal + "<br>" + titleTwo + "<br>" + "<br>" + callFinal + "<br>" + callTwo + "<br>" + "<br>" + evenFinal + "<br>" + evenTwo + "<br>" + "<br>" + oddFinal + "<br>" + oddTwo);
         }
+           
+           
+           
+           
+           else if (value == "template_4"){
+            console.log("Print Independent Journal CSS");
+            
+            var rootOne = [ ".thirdPartyRoot {"];
+            var rootTwo = [ "}"];
+            var rootStyles = $(".thirdPartyRoot").css(["font-size", "height", "line-height",  "position", "padding", "border-bottom", "border-top"]);
+            $.each( rootStyles, function(prop, value) {
+            rootOne.push( prop + ": " + value +";");
+            });
+            var rootFinal = [rootOne.join("<br>")];   
+               
+               
+            var mediaOne = [ ".thirdPartyMediaClass {"];
+           var mediaTwo = [ "}"];
+           var mediaStyles = $(".thirdPartyMediaClass").css(["width", "height", "display", "float", "margin-top"]);
+            $.each( mediaStyles, function(prop, value) {
+            mediaOne.push( prop + ": " + value +";");
+            });
+            var mediaFinal = [mediaOne.join("<br>")]; 
+           
+           
+           
+           var titleOne = [ ".thirdPartyTitleClass {"];
+           var titleTwo = [ "}"];
+           var titleStyles = $(".thirdPartyTitleClass").css(["overflow", "text-overflow", "white-space", "padding", "line-height", "font-size", "font-weight", "text-transform", "font-family", "text-rendering", "clear"]);
+            $.each( titleStyles, function(prop, value) {
+            titleOne.push( prop + ": " + value +";");
+            });
+            var titleFinal = [titleOne.join("<br>")];  
+           
+           
+           var callOne = [ ".thirdPartyCallToActionClass {"];
+           var callTwo = [ "}"];
+           var callStyles = $(".thirdPartyCallToActionClass").css(["font-family", "margin", "padding", "font-weight", "color", "background-color", "text-transform", "font-size", "float"]);
+            $.each( callStyles, function(prop, value) {
+            callOne.push( prop + ": " + value +";");
+            });
+            var callFinal = [callOne.join("<br>")];  
+            
+            
+            
+            var bodyOne = [ ".fbAdBody {"];
+            var bodyTwo = [ "}"];
+            var bodyStyles = $(".fbAdBody").css(["display", "height", "-webkit-line-clamp", "overflow", "padding-left", "font-weight", "text-transform", "font-family", "text-rendering"]);
+            $.each( bodyStyles, function(prop, value) {
+            bodyOne.push( prop + ": " + value + " !mportant" +";");
+            });
+            var bodyFinal = [bodyOne.join("<br>")]; 
+           
+               
+           
+            $( ".main_result" ).html(rootFinal + "<br>" + rootTwo + "<br>" + "<br>" + mediaFinal + "<br>" + mediaTwo + "<br>" + "<br>" + bodyFinal + "<br>" + bodyTwo + "<br>" + "<br>" + titleFinal + "<br>" + titleTwo + "<br>" + "<br>" + callFinal + "<br>" + callTwo);
+        }
+           
            
            
            
