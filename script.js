@@ -1,3 +1,6 @@
+
+
+
 /* ------ Tabs Creation ------- */
 
 $(function () {
@@ -10,6 +13,21 @@ $(function () {
 $(document).ready(function (){
     
 
+/* ------ DFP Passback Extract ------ */
+
+$(".passback_button").click(function(){
+    var dfpPassback = $(".passback_input").val();
+    var startPos = dfpPassback.indexOf(">") + 1;
+    var endPos = dfpPassback.indexOf("<", startPos);
+    var dfpSnippet = dfpPassback.substring(startPos,endPos);
+    console.log(dfpSnippet);
+    $(".passback_input_final").focus();
+    $(".passback_input_final").text(function(){
+       return $.trim(dfpSnippet); 
+    });
+    $scope.$digest();
+});
+    
 /* ------ Hide Phone on Other Tab Clicks ------ */
 
 
