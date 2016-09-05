@@ -1,6 +1,3 @@
-
-
-
 /* ------ Tabs Creation ------- */
 
 $(function () {
@@ -11,6 +8,43 @@ $(function () {
 /* ------ Main Code on Doc Ready ------- */
 
 $(document).ready(function (){
+    
+    
+/* ------ Passback Tag Swap on Select ------- */
+
+$("ad-tag-dfp, ad-tag-adx").hide();
+    
+$(".passback_type").change(function(){
+            var value = $(".passback_type").val();
+                console.log(value);
+
+            if (value == "passback_1") {
+                console.log("DFP has been chosen");
+                $("ad-tag-adx").hide();
+                $("ad-tag-dfp").show();
+            }
+
+            else if (value == "passback_2") {
+                console.log("AdX has been chosen");
+                $("ad-tag-dfp").hide();
+                $("ad-tag-adx").show();
+            }
+
+            else if (value == "passback_3") {
+                console.log("AdSense has been chosen")
+                
+            }
+
+            else if (value == "passback_4") {
+                console.log("Rubicon has been chosen");
+                
+            }
+
+            else {
+                console.log("nothing");
+                
+            }
+        });
     
 
 /* ------ DFP Passback Extract ------ */
@@ -25,7 +59,6 @@ $(".passback_button").click(function(){
     $(".passback_input_final").text(function(){
        return $.trim(dfpSnippet); 
     });
-    $scope.$digest();
 });
     
 /* ------ Hide Phone on Other Tab Clicks ------ */
@@ -36,8 +69,11 @@ $(".tabby_1").click(function(){
 });
     
 $(".tabby_2").click(function(){
-   $(".phone").css({"display": "none"}) 
+   $(".phone").css({"display": "none"});
 });
+    
+
+    
     
 /* ------ Tooltips ------- */
 
