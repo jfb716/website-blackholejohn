@@ -1,10 +1,6 @@
-
-
-
-label {
-    display: inline-block;
+html {
+    text-align: center;
 }
-
 
 .blue_top {
     background-color: #416BC4;
@@ -17,23 +13,44 @@ label {
     clear: both;
 }
 
-.main_result {
-    height: 800px;
-    width: 500px;
-    padding: 20px;
-    background-color: lightgray;
-    color: rgb(13, 13, 13);
-    box-sizing: border-box;
-    font-size: 12px;
+
+.ad_box {
+
+
+}
+
+.control_box {
+
+    
 }
 
 
 
+.box_left {
+    display: inline-block;
+    width: 400px;
+    height: 800px;
+    border: 3px double #416BC4;
+    text-align: justify;
+}
 
+.box_middle {
+    display: inline-block;
+    width: 400px;
+    border: 3px double #416BC4;
+    height: 400px;
+    margin: 0 20px 200px;
+}
 
-
-
-
-
-
-
+.box_right {
+    font-size: 10px;
+    width: 400px;
+    height: 800px;
+    word-wrap: break-word;
+    border: 3px double #416BC4;
+    display: inline-block;
+    overflow-y: auto;
+    text-align: justify;
+    padding: 5px;
+    box-sizing: border-box;
+}

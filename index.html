@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" ng-app="myApp">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +11,7 @@
         
         <!-- Styles -->
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" media="(max-width:499px)" href="css/small.css">
+        <link rel="stylesheet" media="(max-width:1350px)" href="small.css">
         
         <!-- External Sources -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -20,7 +20,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         
         <!-- My Scripts -->
-        <script src="script.js"></script>        
+        <script src="jquery.js"></script> 
+        <script src="scripts.js"></script>    
+        <script src="angular.js"></script>   
     
     </head>
     <body>
@@ -38,25 +40,51 @@
                   </ul>
  
                     
-                    <div class="main" id="tabs-1">
-                        <div class="cat_box">
-                        <label for="site_color">Site Color: </label>
-                         <button class="toggle_blk button" title="Make site background Black">Black</button>
-                         <button class="toggle_wht button" title="Make site background White">White</button>
-                        </div>
-                        <hr>
-                        <div class="cat_box">
-                        <label for="adchoice_color">AdChoice Color: </label>
-                         <button class="adchoice_blk button" title="Make AdChoices Icon Black">Black</button>
-                         <button class="adchoice_wht button" title="Make AdChoices Icon White">White</button>
-                        </div>
-                        <hr>
-                        <div>
-                            <button class="main_button button" title="Print out CSS for the unit displayed to the right">Get CSS</button>
-                            <div class="main_result"></div>
-                        </div>
+                    <div class="numberOne" id="tabs-1">
+                          
+                          
+                          
+                           <div class="box_left">
+                               
+                                <div class="ad_box">
+
+                                </div>
+
+                                <div class="control_box">
+
+                                </div>
+                                
+                           </div>
+                           
+                           
+
+                          <div class="box_middle">
+                              
+                          </div>
+                          
+                          
+                          
+                          <div class="box_right">
+                           
+                            <an-tag></an-tag>
+                            
+                          </div>
+                                
+                      
+                       
+                       
+                       
                     </div>
                     
+                    
+                    
+                    
+                    <div class="numberTwo" id="tabs-2">
+                        
+                        
+                        
+                        
+                    </div>
             </div>
             
         </main>
