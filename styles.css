@@ -1,32 +1,10 @@
-main {
-    height: 1600px;
-}
 
-.col_1 {
-    float: left;
-    width: 60%;
-    height: 100%;
-    box-sizing: border-box;
-    
-}
-
-.col_2 {
-    float: left;
-    width: 40%;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: lightgray;
-    
-}
 
 
 label {
     display: inline-block;
 }
 
-select {
-    display: inline-block;
-}
 
 .blue_top {
     background-color: #416BC4;
@@ -40,72 +18,14 @@ select {
 }
 
 .main_result {
-    height: 1300px;
-    width: 100%;
-    padding: 20px;
-    background-color: lightgray;
-    color: rgb(13, 13, 13);
-    box-sizing: border-box;
-    font-size: 12px;
-}
-
-.ad_tag {
-    position: fixed;
-    display: block;
-    margin-left: 25px;
-
-}
-
-
-
-.phone {
-    border: 5px ridge #b9b9b9;
-    height: 667px;
-    width: 375px;
-    position: fixed;
-    margin-left: 5%;
-    margin-top: 10%;
-    display: block;
-    border-radius: 15px;
-    background-color: #fff;
-    box-shadow: 10px 10px 5px #888888;
-}
-
-.p_text {
-    position: absolute;
-    bottom: 0;
-}
-
-.phone p {
-    padding: 0 10px;
-    color: #b9b9b9;
-}
-
-
-.placement_input {
-    border: 5px ridge;
-    width: 355px;
-}
-
-.textbox_1 {
-    height: 200px;
-    width: 700px;
-    border: 5px ridge;
-}
-
-
-
-.passback_result {
     height: 800px;
-    width: 100%;
+    width: 500px;
     padding: 20px;
     background-color: lightgray;
     color: rgb(13, 13, 13);
     box-sizing: border-box;
     font-size: 12px;
-    overflow: hidden;
 }
-
 
 
 
