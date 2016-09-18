@@ -1,6 +1,4 @@
-html {
-    text-align: center;
-}
+
 
 .blue_top {
     background-color: #416BC4;
@@ -26,21 +24,34 @@ html {
 
 
 
+input {
+    display: inline-block; 
+}
 .box_left {
     display: inline-block;
     width: 400px;
     height: 800px;
     border: 3px double #416BC4;
     text-align: justify;
+    position: relative;
+    top: -100px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .box_middle {
     display: inline-block;
     width: 400px;
     border: 3px double #416BC4;
-    height: 400px;
-    margin: 0 20px 200px;
+    height: 600px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 0 20px;
+    position: relative;
+    top: -100px;
+    color: #ffc5c5;
 }
+
 
 .box_right {
     font-size: 10px;

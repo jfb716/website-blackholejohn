@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" ng-app="myApp">
+<html lang="en-US" ng-app="myApp" ng-controller="myCtrl">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,20 +46,41 @@
                           
                            <div class="box_left">
                                
-                                <div class="ad_box">
-
-                                </div>
-
-                                <div class="control_box">
-
-                                </div>
-                                
+                                <label for="placementId">Placement-ID:<input id="placementId" type="text" ng-model="placementid"></label>
+                                <br>
+                                <hr>
+                                <br>
+                                <label for="ctaCol">CTA-Color:<input type="text" id="ctaCol" ng-model="ctacolor"><button class="button ctaButton">Update</button></label>
+                                <br>
+                                <hr>
+                                <br>
+                                <label for="fontFam">Font-Family:<input type="text" id="fontFam" ng-model="fontfamily" ng-init="Arial, Helvetica, sans-serif"><button class="button fontFamButton">Update</button></label>
+                                <br>
+                                <hr>
+                                <br>
+                                <label for="subFontWeight">SubTitle-Weight:<input type="text" id="subFontWeight" ng-model="subFontWeight"><button class="button subWeightButton">Update</button></label>
+                                <br>
+                                <hr>
+                                <br>
+                                <label for="titFontWeight">Title-Weight:<input type="text" id="titFontWeight" ng-model="titFontWeight"><button class="button titWeightButton">Update</button></label>
+                                <br>
+                                <hr>
+                                <br>
+                                <label for="ctaFontWeight">CTA-Weight:<input type="text" id="ctaFontWeight" ng-model="ctaFontWeight"><button class="button ctaWeightButton">Update</button></label>
+                                <br>
+                                <hr>
+                                <br>
+                                <button class="button tagButton">Get Tag Code</button>
                            </div>
                            
                            
 
                           <div class="box_middle">
-                              
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore deleniti eos nisi fuga at eligendi quaerat odit nam aspernatur, dolorem inventore animi sunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, hic, quod. Minus suscipit, saepe? Consecte.</p>
+                             <div style="height:250px;width:300px;margin:auto">
+                              <an-ad></an-ad>
+                             </div>
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quia natus, culpa, eveniet quia architecto odio veritatis quae maiores eum molestiae tempore quia provident quia explicabo harum in unde fuga quia porro atque perspiciatis!</p>
                           </div>
                           
                           
