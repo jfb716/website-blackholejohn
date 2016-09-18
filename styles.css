@@ -20,7 +20,7 @@ input {
 }
 .box_left {
     display: inline-block;
-    width: 400px;
+    width: 370px;
     height: 800px;
     border: 3px double #416BC4;
     text-align: justify;
@@ -32,7 +32,7 @@ input {
 
 .box_middle {
     display: inline-block;
-    width: 400px;
+    width: 370px;
     border: 3px double #416BC4;
     height: 600px;
     box-sizing: border-box;
@@ -46,7 +46,7 @@ input {
 
 .box_right {
     font-size: 10px;
-    width: 400px;
+    width: 370px;
     height: 800px;
     word-wrap: break-word;
     border: 3px double #416BC4;
