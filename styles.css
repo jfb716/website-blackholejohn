@@ -32,7 +32,7 @@ input {
 
 .box_middle {
     display: inline-block;
-    width: 370px;
+    width: 350px;
     border: 3px double #416BC4;
     height: 600px;
     box-sizing: border-box;
