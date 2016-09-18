@@ -77,10 +77,10 @@ $(".titWeightButton").click(function(){
 $(".ctaWeightButton").click(function(){
     console.log("CTA Weight Button Click"); 
     
-    var ctaWeNew = $("ctaFontWeight").val();
+    var ctaWeNew = $("#ctaFontWeight").val();
     console.log(ctaWeNew);
     
-    $(".fbAdCallToACtion").css({"font-weight": ctaWeNew});
+    $(".thirdPartyCallToActionClass").css({"font-weight": ctaWeNew});
 });
     
 });
