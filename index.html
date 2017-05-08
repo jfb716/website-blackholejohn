@@ -8,27 +8,186 @@
         <meta name="description" content="Test site for John F. Black">
         <title>BlackHoleJohn</title>
         <link rel="stylesheet" href="styles.css">
+        <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+        <!-- Header Bidding Configs -->
+        <script>
+          var PREBID_TIMEOUT = 2000;
+
+          var adUnits = [{
+              code: 'div-gpt-ad-1',
+              sizes: [[320, 50]],
+              bids: [{
+                  bidder: 'audienceNetwork',
+                  params: {
+                     placementId: '118220978561571_356276288089371',
+                     testmode: true,
+                  }
+              }]
+          },{
+              code: 'div-gpt-ad-2',
+              sizes: [[300, 250]],
+              bids: [{
+                  bidder: 'audienceNetwork',
+                  params: {
+                     placementId: '118220978561571_356276791422654',
+                     testmode: true,
+                  }
+              }]
+          },{
+              code: 'div-gpt-ad-3',
+              sizes: [[300, 250]],
+              bids: [{
+                  bidder: 'audienceNetwork',
+                  params: {
+                     placementId: '118220978561571_356276858089314',
+                     testmode: true,
+                     native: true
+                  }
+              }]
+          },{
+              code: 'div-gpt-ad-4',
+              sizes: [[300, 250]],
+              bids: [{
+                  bidder: 'audienceNetwork',
+                  params: {
+                     placementId: '118220978561571_346529649064035',
+                     testmode: true,
+                     fullwidth: true
+                  }
+              }]
+          }];
+
+          var pbjs = pbjs || {};
+          pbjs.que = pbjs.que || [];
+
+        </script>
+
+        <!-- Boilerplate -->
+
+        <script type="text/javascript" src="resources/js/prebid_v2.js" async></script>
+          <script>
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+
+            pbjs.bidderSettings = {
+                    standard: {
+                        adserverTargeting: [
+                             {
+                         key: "fb_bidid",
+                        val: function (bidResponse) {
+                            console.log('Bid Response Bid ID: ' + bidResponse.bidid);
+                            $("#bidId").val(bidResponse.bidid);
+                            return bidResponse.bidid;
+                         }
+                            },
+                            {
+                                key: "hb_bidder_demo",
+                                val: function (bidResponse) {
+                                    console.log('Bid Response Bidder Name: ' + bidResponse.bidderCode);
+                                    $("#bidder").val(bidResponse.bidderCode);
+                                    return bidResponse.bidderCode;
+                                }
+                            }, {
+                                key: "hb_adid",
+                                val: function (bidResponse) {
+                                    console.log('Bid Response Ad ID: ' + bidResponse.adId);
+                                    $("#adId").val(bidResponse.adId);
+                                    return bidResponse.adId;
+                                }
+                            }, {
+                                key: "hb_pb_demo",
+                                val: function (bidResponse) {
+                                    console.log('Bid Response Bid Price: ' + bidResponse.pbMg);
+                                    $("#pb").val(bidResponse.pbMg);
+                                    return bidResponse.pbMg;
+                                }
+                            }
+                        ]
+                    },
+
+                };
+
+            pbjs.que.push(function() {
+                pbjs.addAdUnits(adUnits);
+                pbjs.requestBids({
+                    bidsBackHandler: sendAdserverRequest
+                });
+            });
+
+            function sendAdserverRequest() {
+                if (pbjs.adserverRequestSent) return;
+                pbjs.adserverRequestSent = true;
+                googletag.cmd.push(function() {
+                    pbjs.que.push(function() {
+                        pbjs.setTargetingForGPTAsync();
+                        console.log("Key Values Appended");
+                        googletag.pubads().refresh();
+                    });
+                });
+            }
+
+            setTimeout(function() {
+                sendAdserverRequest();
+            }, PREBID_TIMEOUT);
+
+
+          </script>
+
+          <!-- GPT Tag -->
+
+          <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+
+          <script>
+              googletag.cmd.push(function() {
+              googletag.defineSlot('/27721068/header_bidding_demo', [320, 50], 'div-gpt-ad-1').addService(googletag.pubads());
+              googletag.defineSlot('/27721068/header_bidding_demo', [300, 250], 'div-gpt-ad-2').addService(googletag.pubads());
+              googletag.defineSlot('/27721068/header_bidding_demo', [301, 250], 'div-gpt-ad-3').addService(googletag.pubads());
+              googletag.defineSlot('/27721068/header_bidding_demo', [302, 250], 'div-gpt-ad-4').addService(googletag.pubads());
+              googletag.enableServices();
+            });
+          </script>
     </head>
 
     <body>
-
-      <div class="blueBar"></div>
-
-       <h1>AN Prebid.js Open Source Adapter - 320x100</h1>
-
        <div class="blueBar"></div>
-
-       <h1>AN Prebid.js Open Source Adapter - 300x250</h1>
-
+       <h4>AN Prebid.js Open Source Adapter - 320x100</h4>
+       <hr>
+       <div id='div-gpt-ad-1' style="height:50px; width:320px;">
+         <script>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1'); });
+         </script>
+       </div>
+       <hr>
        <div class="blueBar"></div>
-
-       <h1>AN Prebid.js Open Source Adapter - Native</h1>
-
+       <h4>AN Prebid.js Open Source Adapter - 300x250</h4>
+       <hr>
+       <div id='div-gpt-ad-2' style="height:250px; width:300px;">
+         <script>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-2'); });
+         </script>
+       </div>
+       <hr>
        <div class="blueBar"></div>
-
-       <h1>AN Prebid.js Open Source Adapter - FullWidth</h1>
-
-      <div class="blueBar"></div>
-
+       <h4>AN Prebid.js Open Source Adapter - Native</h4>
+       <hr>
+       <div id='div-gpt-ad-3' style="height:100px; width:300px;">
+         <script>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-3'); });
+         </script>
+       </div>
+       <hr>
+       <div class="blueBar"></div>
+       <h4>AN Prebid.js Open Source Adapter - FullWidth</h4>
+       <hr>
+       <div id='div-gpt-ad-4' style="height:250px; width:300px;">
+         <script>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-4'); });
+         </script>
+       </div>
+       <hr>
+       <div class="blueBar"></div>
     </body>
 </html>
