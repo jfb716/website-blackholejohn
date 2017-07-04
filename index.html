@@ -9,6 +9,12 @@
         <title>BlackHoleJohn</title>
         <link rel="stylesheet" href="styles.css">
         <!-- Header Bidding Configs -->
+
+        <script type="text/javascript" src="http://ssl.p.jwpcdn.com/player/v/7.2.4/jwplayer.js"></script>
+        <script type="text/javascript">
+           jwplayer.key="0VWmN3qZE4EiHfLaawQO3Rp0SCBLO3nMBCSJgw==";
+        </script>
+      <script>
         <script>
 
           var videoAdUnit = {
@@ -99,36 +105,34 @@
 
     <body>
 
-      <div class="example-video-container">
-        <video id="vid1" class="video-js vjs-default-skin vjs-big-play-centered" controls
-          data-setup='{}'
-          width='640'
-          height='480'
-        >
-          <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'/>
-          <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'/>
-          <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'/>
-        </video>
+      <h2>Prebid Video - JWPlayer</h2>
+      <br>
+      <br>
+      <div id="playerContainerJW" style='width:552px; height:310px; border:1px solid black;'>
       </div>
 
       <script>
+        var jwPlayerInstance = jwplayer("playerContainerJW");
 
-      var vid1 = videojs('vid1');
+        invokeVideoPlayer = function(url) {
+            jwPlayerInstance.setup({
+                "file": "http://video-demo.appnexus.com/pbjs/JWPlayerDemo/AppNexus_Summit_Video_HighRes.mp4",
+                "autostart": true,
+                "mute": true,
+                "advertising": {
+                    client: "vast",
+                }
+            });
 
-      function invokeVideoPlayer(url) {
-        videojs("vid1").ready(function() {
-          var player = this;
-          var vastAd = player.vastClient({
-            adTagUrl: url,
-            playAdAlways: true,
-            vpaidFlashLoaderPath: "https://github.com/MailOnline/videojs-vast-vpaid/blob/RELEASE/bin/VPAIDFlash.swf?raw=true",
-            autoplay: true
-          });
-          player.muted(true);
-          player.play();
-        });
-      }
+            jwPlayerInstance.on('beforePlay', function(){
+                jwPlayerInstance.playAd(url);
+            })
+        }
 
+        if (tempTag) {
+            invokeVideoPlayer(tempTag);
+            tempTag = false;
+        }
       </script>
 
     </body>
