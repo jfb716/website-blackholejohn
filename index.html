@@ -14,7 +14,7 @@
 
           var videoAdUnit = {
             code: 'video1',
-            sizes: [[300, 250]],
+            sizes: [[640, 480]],
             mediaType: 'video',
             bids: [
               {
@@ -39,11 +39,6 @@
 
         <script type="text/javascript" src="" async></script>
           <script>
-            var googletag = googletag || {};
-            googletag.cmd = googletag.cmd || [];
-            googletag.cmd.push(function() {
-                googletag.pubads().disableInitialLoad();
-            });
 
             pbjs.bidderSettings = {
                     standard: {
@@ -75,7 +70,7 @@
                 };
 
             pbjs.que.push(function() {
-                pbjs.addAdUnits(adUnits);
+                pbjs.addAdUnits(videoAdUnit);
                 pbjs.requestBids({
                     bidsBackHandler: sendAdserverRequest
                 });
@@ -87,7 +82,6 @@
                 googletag.cmd.push(function() {
                     pbjs.que.push(function() {
                         pbjs.setTargetingForGPTAsync();
-                        console.log("Key Values Appended");
                         googletag.pubads().refresh();
                     });
                 });
