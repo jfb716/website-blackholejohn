@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="styles.css">
         <!-- Header Bidding Configs -->
         <script>
-          var PREBID_TIMEOUT = 2000;
 
           var videoAdUnit = {
             code: 'video1',
@@ -52,7 +51,7 @@
                                 key: "hb_size",
                                 val: function (bidResponse) {
                                     return bidResponse.size;
-
+                                }
                             }, {
                                 key: "hb_adid",
                                 val: function (bidResponse) {
@@ -69,28 +68,29 @@
 
                 };
 
-            pbjs.que.push(function() {
-                pbjs.addAdUnits(videoAdUnit);
-                pbjs.requestBids({
-                    bidsBackHandler: sendAdserverRequest
+                pbjs.que.push(function(){
+                  pbjs.addAdUnits(videoAdUnit);
+
+                  pbjs.requestBids({
+                    timeout : 700,
+                    bidsBackHandler : function(bids) {
+                      try {
+                        url = bids.video.bids[0].vastUrl;
+                      } catch (e) {}
+
+                      var adserverTag = 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/27721068/an_video_page/instream_test&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]';
+
+                      var options = {
+                        'adserver': 'dfp',
+                        'code': 'video'
+                      };
+
+                      var masterTagUrl = pbjs.buildMasterVideoTagFromAdserverTag(adserverTag, options);
+
+                      invokeVideoPlayer(masterTagUrl);
+                    }
+                  });
                 });
-            });
-
-            function sendAdserverRequest() {
-                if (pbjs.adserverRequestSent) return;
-                pbjs.adserverRequestSent = true;
-                googletag.cmd.push(function() {
-                    pbjs.que.push(function() {
-                        pbjs.setTargetingForGPTAsync();
-                        googletag.pubads().refresh();
-                    });
-                });
-            }
-
-            setTimeout(function() {
-                sendAdserverRequest();
-            }, PREBID_TIMEOUT);
-
 
           </script>
 
@@ -98,6 +98,38 @@
     </head>
 
     <body>
+
+      <div class="example-video-container">
+        <video id="vid1" class="video-js vjs-default-skin vjs-big-play-centered" controls
+          data-setup='{}'
+          width='640'
+          height='480'
+        >
+          <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'/>
+          <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'/>
+          <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'/>
+        </video>
+      </div>
+
+      <script>
+
+      var vid1 = videojs('vid1');
+
+      function invokeVideoPlayer(url) {
+        videojs("vid1").ready(function() {
+          var player = this;
+          var vastAd = player.vastClient({
+            adTagUrl: url,
+            playAdAlways: true,
+            vpaidFlashLoaderPath: "https://github.com/MailOnline/videojs-vast-vpaid/blob/RELEASE/bin/VPAIDFlash.swf?raw=true",
+            autoplay: true
+          });
+          player.muted(true);
+          player.play();
+        });
+      }
+
+      </script>
 
     </body>
 </html>
