@@ -8,149 +8,37 @@
         <meta name="description" content="Test site for John F. Black">
         <title>BlackHoleJohn</title>
         <link rel="stylesheet" href="styles.css">
-        <!-- Header Bidding Configs -->
-
-        <script type="text/javascript" src="http://ssl.p.jwpcdn.com/player/v/7.2.4/jwplayer.js"></script>
-        <script type="text/javascript">
-           jwplayer.key="0VWmN3qZE4EiHfLaawQO3Rp0SCBLO3nMBCSJgw==";
-        </script>
-        <script>
-
-          var PREBID_TIMEOUT = 2000;
-
-
-
-
-      var adUnits = [{
-        code: 'video1',
-        sizes: [[640, 480]],
-        bids: [
-          {
-            bidder: 'audienceNetwork',
-            params: {
-              placementId: '118220978561571_364707690579564',
-              format: 'video'
-            }
-          }
-        ]
-      },{
-              code: 'div-gpt-ad-1',
-              sizes: [[300, 250]],
-              bids: [{
-                  bidder: 'audienceNetwork',
-                  params: {
-                     placementId: '118220978561571_429341297449536',
-                     format: 'fullwidth'
-                  }
-              }]
-          },{
-                  code: 'div-gpt-ad-2',
-                  sizes: [[300, 250]],
-                  bids: [{
-                      bidder: 'audienceNetwork',
-                      params: {
-                         placementId: '118220978561571_429341297449536',
-                         format: 'native'
-                      }
-                  }]
-              }];
-
-          var pbjs = pbjs || {};
-          pbjs.que = pbjs.que || [];
-
-        </script>
-
-        <!-- Boilerplate -->
-
-        <script type="text/javascript" src="/prebid.js" async></script>
-          <script>
-
-            pbjs.bidderSettings = {
-                    standard: {
-                        adserverTargeting: [
-                            {
-                                key: "hb_bidder",
-                                val: function (bidResponse) {
-                                    return bidResponse.bidderCode;
-                                }
-                            }, {
-                                key: "hb_size",
-                                val: function (bidResponse) {
-                                    return bidResponse.size;
-                                }
-                            }, {
-                                key: "hb_adid",
-                                val: function (bidResponse) {
-                                    return bidResponse.adId;
-                                }
-                            }, {
-                                key: "hb_pb",
-                                val: function (bidResponse) {
-                                    return bidResponse.pbMg;
-                                }
-                            }
-                        ]
-                    },
-
-                };
-
-                pbjs.que.push(function(){
-                  pbjs.addAdUnits(adUnits);
-
-                  pbjs.requestBids({
-                    timeout : 700,
-                    bidsBackHandler : function(bids) {
-                      try {
-                        url = bids.video.bids[0].vastUrl;
-                      } catch (e) {}
-
-                      var adserverTag = 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/27721068/an_video_page/instream_test&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]';
-
-                      var options = {
-                        'adserver': 'dfp',
-                        'code': 'video'
-                      };
-
-                      var masterTagUrl = pbjs.buildMasterVideoTagFromAdserverTag(adserverTag, options);
-
-                      invokeVideoPlayer(masterTagUrl);
-                    }
-                  });
-                });
-
-          </script>
-
-
     </head>
 
     <body>
 
-      <h2>Prebid Video - JWPlayer</h2>
-      <br>
-      <br>
-      <div id="playerContainerJW" style='width:552px; height:310px; border:1px solid black;'>
+      <h1>Grid Test</h1>
+      <div class="grid">
+        <div class="a">
+          <p>A</p>
+        </div>
+        <div class="b">
+          <p>B</p>
+        </div>
+        <div class="c">
+          <p>C</p>
+        </div>
+        <div class="d">
+          <p>D</p>
+        </div>
+        <div class="e">
+          <p>E</p>
+        </div>
+        <div class="f">
+          <p>F</p>
+        </div>
+        <div class="g">
+          <p>G</p>
+        </div>
+        <div class="h">
+          <p>H</p>
+        </div>
       </div>
-
-      <script>
-        var jwPlayerInstance = jwplayer("playerContainerJW");
-
-        invokeVideoPlayer = function(url) {
-            jwPlayerInstance.setup({
-                "file": "http://video-demo.appnexus.com/pbjs/JWPlayerDemo/AppNexus_Summit_Video_HighRes.mp4",
-                "autostart": true,
-                "mute": true,
-                "advertising": {
-                    client: "vast",
-                }
-            });
-
-            jwPlayerInstance.on('beforePlay', function(){
-                jwPlayerInstance.playAd(url);
-            })
-        }
-
-
-      </script>
 
     </body>
 </html>
